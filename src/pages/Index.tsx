@@ -147,8 +147,8 @@ export default function HomePage() {
               <div className="text-sm text-muted-foreground">ОС поддерживается</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-1">24 МБ</div>
-              <div className="text-sm text-muted-foreground">Размер программы</div>
+              <div className="text-3xl font-bold text-primary mb-1">CLI</div>
+              <div className="text-sm text-muted-foreground">Режим работы</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-1">x86/x64</div>
