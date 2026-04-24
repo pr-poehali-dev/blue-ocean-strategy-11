@@ -473,6 +473,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section id="comparison" className="py-20 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Сравнение с аналогами</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Почему разработчики выбирают Node Executable Builder вместо открытых альтернатив
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-xl border">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-muted/50">
+                  <th className="text-left px-6 py-4 font-semibold">Возможность</th>
+                  <th className="px-6 py-4 font-semibold text-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
+                        <Icon name="Package" size={14} className="text-primary-foreground" />
+                      </div>
+                      <span className="text-primary">NEB</span>
+                    </div>
+                  </th>
+                  <th className="px-6 py-4 font-semibold text-center text-muted-foreground">pkg</th>
+                  <th className="px-6 py-4 font-semibold text-center text-muted-foreground">nexe</th>
+                  <th className="px-6 py-4 font-semibold text-center text-muted-foreground">sea (Node 22)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {[
+                  ["Windows / Linux / macOS", true, true, true, true],
+                  ["Docker-образ из коробки", true, false, false, false],
+                  ["Защита исходного кода", true, false, false, false],
+                  ["Коммерческая поддержка", true, false, false, false],
+                  ["Активное развитие", true, false, false, true],
+                  ["CI/CD-интеграция (CLI)", true, true, true, true],
+                  ["Не требует Node.js у пользователя", true, true, true, true],
+                  ["Нативные addons", true, true, false, true],
+                ].map(([feature, neb, pkg, nexe, sea], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? "bg-background" : "bg-muted/20"}>
+                    <td className="px-6 py-3 font-medium">{feature as string}</td>
+                    {[neb, pkg, nexe, sea].map((val, i) => (
+                      <td key={i} className="px-6 py-3 text-center">
+                        {val ? (
+                          <Icon name="Check" size={18} className={i === 0 ? "text-primary mx-auto" : "text-green-500 mx-auto"} />
+                        ) : (
+                          <Icon name="X" size={18} className="text-muted-foreground/40 mx-auto" />
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-xs text-muted-foreground mt-4">
+            pkg — архивирован с 2022 г., nexe — минимальная поддержка. Данные актуальны на апрель 2026 г.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
