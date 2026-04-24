@@ -99,13 +99,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto max-w-4xl rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+          <div className="relative mx-auto max-w-3xl rounded-xl overflow-hidden shadow-2xl border border-border/50">
             <img
-              src="https://cdn.poehali.dev/projects/ea85c60d-6835-46a4-b054-dfe83a578f02/files/a85f437c-27b3-443d-87cb-f3a99304201c.jpg"
+              src="https://cdn.poehali.dev/projects/ea85c60d-6835-46a4-b054-dfe83a578f02/files/9e16ce78-13d4-4417-9982-3924fa979d6e.jpg"
               alt="Node.js Executable Builder — редактор кода"
               className="w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </div>
         </div>
       </section>
