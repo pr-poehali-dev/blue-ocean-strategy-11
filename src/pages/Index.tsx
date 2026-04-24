@@ -60,9 +60,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto max-w-5xl text-center">
-          <Badge variant="secondary" className="mb-6">
-            Защита исходного кода · Простое распространение · Кроссплатформенность
-          </Badge>
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            <Badge variant="secondary">
+              Защита исходного кода · Простое распространение · Кроссплатформенность
+            </Badge>
+            <Badge className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/10">
+              🇷🇺 Отечественное ПО · Включён в реестр Роспатента
+            </Badge>
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent leading-tight">
             Node.js Executable Builder
           </h1>
@@ -91,6 +96,39 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={16} className="text-primary" />
               <span>Коммерческое применение</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Import Substitution Banner */}
+      <section className="py-12 px-4 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl">🇷🇺</div>
+              <div>
+                <div className="font-bold text-lg mb-1">Отечественный продукт</div>
+                <p className="text-muted-foreground text-sm max-w-xl">
+                  Node.js Executable Builder — российская разработка, полноценная замена
+                  зарубежным аналогам pkg и nexe. Подходит для реализации требований
+                  по импортозамещению в государственных и корпоративных проектах.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 text-sm shrink-0">
+              <div className="flex items-center gap-2">
+                <Icon name="BadgeCheck" size={16} className="text-primary" />
+                <span>Реестр Роспатента №&nbsp;2026614130</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="BadgeCheck" size={16} className="text-primary" />
+                <span>Разработка и поддержка в России</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="BadgeCheck" size={16} className="text-primary" />
+                <span>Документация и лицензии на русском языке</span>
+              </div>
             </div>
           </div>
         </div>
