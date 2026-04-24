@@ -101,7 +101,7 @@ export default function HomePage() {
 
           <div className="relative mx-auto max-w-3xl rounded-xl overflow-hidden shadow-2xl border border-border/50">
             <img
-              src="https://cdn.poehali.dev/projects/ea85c60d-6835-46a4-b054-dfe83a578f02/files/9e16ce78-13d4-4417-9982-3924fa979d6e.jpg"
+              src="https://cdn.poehali.dev/projects/ea85c60d-6835-46a4-b054-dfe83a578f02/files/0f4c8f4b-b3d9-4b7b-882a-426479fb63b1.jpg"
               alt="Node.js Executable Builder — редактор кода"
               className="w-full object-cover"
             />
@@ -743,8 +743,9 @@ export default function HomePage() {
               <a href="https://github.com" className="hover:text-foreground transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="mailto:info@example.com" className="hover:text-foreground transition-colors">
+              <a href="mailto:victor.mac.nikitin@gmail.com" className="hover:text-foreground transition-colors flex items-center gap-2">
                 <Mail className="w-5 h-5" />
+                <span className="text-sm">victor.mac.nikitin@gmail.com</span>
               </a>
             </div>
           </div>
