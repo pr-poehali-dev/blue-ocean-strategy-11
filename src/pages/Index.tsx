@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
 import Icon from "@/components/ui/icon";
 import { Github, Mail, Loader2, Send, Moon, Sun } from "lucide-react";
@@ -330,6 +331,218 @@ export default function HomePage() {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section id="cases" className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Примеры использования</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Кто и для каких задач использует Node Executable Builder
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Building2" size={24} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">SaaS-компании</Badge>
+                <h3 className="text-lg font-semibold mb-2">Защита коммерческого продукта</h3>
+                <p className="text-muted-foreground text-sm">
+                  Компании, продающие Node.js-решения корпоративным клиентам, используют
+                  Builder для поставки продукта в виде бинарника — без риска утечки
+                  исходного кода конкурентам или клиентам.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Wrench" size={24} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">DevOps / Инфраструктура</Badge>
+                <h3 className="text-lg font-semibold mb-2">CLI-утилиты для команд</h3>
+                <p className="text-muted-foreground text-sm">
+                  Разработчики создают внутренние инструменты автоматизации и
+                  распространяют их как готовые бинарники — коллегам не нужно
+                  ставить Node.js или разбираться с зависимостями.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Boxes" size={24} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Системные интеграторы</Badge>
+                <h3 className="text-lg font-semibold mb-2">Встроенные решения</h3>
+                <p className="text-muted-foreground text-sm">
+                  Интеграторы упаковывают Node.js-агенты и коннекторы в автономные
+                  исполняемые файлы для установки на серверах клиентов без
+                  настройки окружения и сопровождения зависимостей.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы клиентов</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Что говорят разработчики, использующие наш инструмент
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  «Наконец-то можно поставлять клиентам готовый .exe без страха, что они
+                  откроют наш код. Builder сэкономил нам недели работы по настройке
+                  кастомных упаковщиков.»
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Алексей М.</div>
+                    <div className="text-xs text-muted-foreground">CTO, продуктовая компания</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  «Использую для CLI-инструментов внутри команды. Коллеги просто скачивают
+                  бинарник и запускают — никаких вопросов про Node.js и npm install.
+                  Отличное решение.»
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Дмитрий К.</div>
+                    <div className="text-xs text-muted-foreground">Senior DevOps Engineer</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  «Интегрировали в GitHub Actions за полчаса. Теперь каждый релиз
+                  автоматически собирает бинарники под три платформы. Docker-образ
+                  тоже работает без нареканий.»
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Ирина В.</div>
+                    <div className="text-xs text-muted-foreground">Lead Developer, интегратор</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Часто задаваемые вопросы</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ответы на популярные вопросы о работе с программой
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="space-y-2">
+            <AccordionItem value="q1" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Нужно ли устанавливать Node.js на машине конечного пользователя?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Нет. В этом и есть главное преимущество. Builder упаковывает среду
+                выполнения Node.js прямо внутрь бинарного файла — пользователю достаточно
+                просто запустить скомпилированный файл.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Можно ли восстановить исходный код из бинарника?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Исходный код компилируется и упаковывается в бинарный формат, что
+                существенно затрудняет его восстановление. Это надёжная защита
+                интеллектуальной собственности для коммерческих приложений.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Поддерживаются ли нативные npm-модули (native addons)?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Да, нативные аддоны поддерживаются. Они включаются в сборку как
+                отдельные файлы рядом с бинарником и корректно загружаются во время
+                выполнения.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Как интегрировать Builder в CI/CD-пайплайн?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Программа работает в консольном режиме и принимает параметры через
+                аргументы командной строки. Это позволяет легко добавить шаг сборки
+                в GitHub Actions, GitLab CI, Jenkins или любой другой CI/CD-инструмент.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Какие операционные системы поддерживаются?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Builder работает на Windows, Linux и macOS (архитектура x86/x64).
+                Кросс-компиляция позволяет собирать бинарники для любой из трёх
+                платформ, независимо от вашей рабочей ОС.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q6" className="border rounded-lg px-4">
+              <AccordionTrigger className="text-left font-medium">
+                Как приобрести лицензию?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Оставьте заявку через форму ниже или напишите нам на почту. Мы свяжемся
+                с вами в течение 24 часов, уточним детали и оформим коммерческую лицензию.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
