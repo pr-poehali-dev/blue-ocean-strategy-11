@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={16} className="text-primary" />
-              <span>Зарегистрировано в реестре ПО</span>
+              <span>Зарегистрировано в Роспатенте №&nbsp;2026614130</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={16} className="text-primary" />
@@ -689,9 +689,10 @@ export default function HomePage() {
               </div>
               <span className="font-semibold">Node Executable Builder</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              &copy; 2020–2026 Node Executable Builder. Все права защищены. Свидетельство о регистрации ПО.
-            </p>
+            <div className="text-sm text-muted-foreground text-center space-y-1">
+              <p>&copy; 2020–2026 Node Executable Builder. Все права защищены.</p>
+              <p>Программа для ЭВМ зарегистрирована в Роспатенте. Свидетельство №&nbsp;2026614130.</p>
+            </div>
             <div className="flex items-center gap-4 text-muted-foreground">
               <a href="https://github.com" className="hover:text-foreground transition-colors">
                 <Github className="w-5 h-5" />
